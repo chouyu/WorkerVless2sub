@@ -707,7 +707,7 @@ export default {
 			const subconverterResponse = await fetch(subconverterUrl);
 			
 			if (!subconverterResponse.ok) {
-				throw new Error(`Error fetching subconverterUrl: ${subconverterResponse.status} ${subconverterResponse.statusText}`);
+				throw new Error(`Error fetching subconverterUrl:${subconverterUrl} : ${subconverterResponse.status} ${subconverterResponse.statusText}`);
 			}
 				
 			let subconverterContent = await subconverterResponse.text();
